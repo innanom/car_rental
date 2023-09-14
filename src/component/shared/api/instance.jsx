@@ -7,8 +7,9 @@ const instance = axios.create({
 export const getCars = async (page) => {
     try {
         const { data } = await instance.get(`/cars?page=${page}&limit=8`);
-        return data.results;
+        return data;
     } catch (error) {
         return error.message;
 }
 }
+

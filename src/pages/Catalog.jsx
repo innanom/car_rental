@@ -1,7 +1,10 @@
+import CarsCatalog from "../component/CarsCatalog/CarsCatalog";
 
 const Catalog = () => {
     return (
-        <div>Catalog</div>
+        <div>
+            <CarsCatalog/>
+        </div>
     )
 };
 
