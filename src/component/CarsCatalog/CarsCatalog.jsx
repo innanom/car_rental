@@ -7,18 +7,30 @@ import CarCard from "../CarCard/CarCard";
 
 const CarsCatalog = () => {
     const [cars, setCars] = useState([]);
+    const [page, setPage] = useState(1);
     
-    console.log(getCars(1));
+    console.log(cars);
 
     useEffect( () => {
-         getCars(1).then(res => setCars(res));
-    }, [])
+        getCars(page).then(res =>
+            setCars(prevCars => 
+                [...prevCars, ...res]
+            ));
+    }, [page])
 
+    const handleLoadMore = () => {
+    setPage(prevPage => prevPage += 1);
+    };
+
+    const totalPage = Math.ceil(cars.length / 8);
 
     return (
-        <ul className={css.list}>
-            {cars.map((car) => <CarCard key={car.id} data={car} />)}
-        </ul>
+        <div>
+            <ul className={css.list}>
+                {cars.map((car) => <CarCard data={car}  key={car.id} />)}
+            </ul>
+            {totalPage > page && <button className={css.btn} onClick={handleLoadMore}>Load more</button>}
+        </div>
     )
 };
 
