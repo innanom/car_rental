@@ -9,7 +9,7 @@ const CarsCatalog = () => {
     const [cars, setCars] = useState([]);
     const [page, setPage] = useState(1);
     
-    console.log(cars);
+    console.log(cars.length);
 
     useEffect( () => {
         getCars(page).then(res =>
@@ -22,7 +22,8 @@ const CarsCatalog = () => {
     setPage(prevPage => prevPage += 1);
     };
 
-    const totalPage = Math.ceil(cars.length / 8);
+    const totalPage = Math.ceil(23 / 8);
+    
 
     return (
         <div>
@@ -30,6 +31,7 @@ const CarsCatalog = () => {
                 {cars.map((car) => <CarCard data={car}  key={car.id} />)}
             </ul>
             {totalPage > page && <button className={css.btn} onClick={handleLoadMore}>Load more</button>}
+            
         </div>
     )
 };
