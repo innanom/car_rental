@@ -1,8 +1,11 @@
+import FavoritesCars from "../component/FavoritesCars/FavoritesCars"
 
 const Favorites = () => {
 
     return (
-        <div>Favorites</div>
+        <div>
+            <FavoritesCars/>
+        </div>
     )
 };
 
