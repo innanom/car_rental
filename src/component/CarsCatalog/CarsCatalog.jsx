@@ -22,7 +22,7 @@ const CarsCatalog = () => {
     setPage(prevPage => prevPage += 1);
     };
 
-    const totalPage = Math.ceil(cars.length / 8);
+    const totalPage = Math.ceil(30 / 8);
 
     return (
         <div className={css.container}>
