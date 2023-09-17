@@ -8,15 +8,18 @@ const FavoritesCars = () => {
     useEffect(() => {
         const favCars = JSON.parse(localStorage.getItem("favorites")) || [];
         setFavoritesCars(favCars);
-        console.log(favCars);
-    }, [])
-
+    }, [favoritesCars])
+    
    
     return (
         <div className={css.container}>
-            <ul className={css.list}>
+            {favoritesCars.length > 0 ? (
+                <ul className={css.list}>
                 {favoritesCars.map((car) => <CarCard data={car}  key={car.id} />)}
-            </ul>
+                </ul>) :
+                (<p className={css.text}>Сhoose your favorite cars!</p>)
+            }
+
                    
         </div>
     )

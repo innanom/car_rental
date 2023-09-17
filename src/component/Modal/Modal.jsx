@@ -39,7 +39,7 @@ const Modal = ({ onClose, data }) => {
     const deposit  = conditions[2];
     return createPortal(
         <div className={css.overlay} onClick={handleCloseClick}>
-            <div class={css.modal}>
+            <div className={css.modal}>
                 <img src={close}
                     alt="close"
                     onClick={handleCloseClick}
