@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import css from './CarCard.module.scss';
+import PropTypes from "prop-types";
 import  Modal  from "../Modal/Modal";
 
 
@@ -51,8 +52,6 @@ const CarCard = ({ data }) => {
     const city = newAdress[1];
     const country = newAdress[2];
 
-   
-
     return (
         <div>
             <li className={css.item} key={id}>
@@ -84,6 +83,10 @@ const CarCard = ({ data }) => {
                 {showModal && <Modal data={data} onClose={handleModalClose} />}
         </div>
     )
+};
+
+CarCard.propTypes = {
+  data: PropTypes.object,
 };
 
 export default CarCard;

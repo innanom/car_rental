@@ -11,10 +11,9 @@ const FavoritesCars = () => {
         console.log(favCars);
     }, [])
 
-    console.log(favoritesCars);
-
+   
     return (
-        <div>
+        <div className={css.container}>
             <ul className={css.list}>
                 {favoritesCars.map((car) => <CarCard data={car}  key={car.id} />)}
             </ul>

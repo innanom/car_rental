@@ -1,3 +1,4 @@
+@import 'src/styles/variables';
 .item {
     position: relative;
     width: 274px;
@@ -10,7 +11,7 @@
     width: 274px;
     height: 268px;
     object-fit: cover;
-    border-radius: 14px;
+    border-radius: $main-radius;
     background: linear-gradient(180deg, rgba(18, 20, 23, 0.50) 2.5%, rgba(18, 20, 23, 0.00) 41.07%), #F3F3F2;
 }
 .heart {
@@ -19,68 +20,59 @@
     right: 0;
     margin-top: 14px;
     margin-right: 14px;
-    
-    
 }
 .car_name {
     display: flex;
     justify-content: space-between;
     margin-bottom: 8px;
-    color: #121417;
-        font-family: Manrope;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 24px;
-        /* 150% */
+    
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+        
+    color: $main-color;
 }
 .car_model {
-    color: #3470FF;
-        font-family: Manrope;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+
+    color: $accent;
 }
 .car_description {
     margin-bottom: 28px;
-        width: 274px;
-        height: 40px;
-        overflow: hidden;
-        display: flex;
-            width: 270px;
-            height: 40px;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 4px;
+    overflow: hidden;
+    display: flex;
+    width: 270px;
+    height: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
 }
 .car_info {
-    
-    color: rgba(18, 20, 23, 0.50);
-        font-family: Manrope;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 18px;
-        /* 150% */
+    display: flex;
+    align-items: flex-start;
+    font-size: 12px;
+    line-height: 1.5;
+        
+    color: $paragraph-color-50;
 }
 .btn {
     display: flex;
-        width: 274px;
-        height: 44px;
-        padding: 12px 99px;
-        justify-content: center;
-        align-items: center;
-        flex-shrink: 0;
-        border-radius: 12px;
-        background: #3470FF;
-        border: 0;
-
-        color:  #FFF;
-            font-family: Manrope;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 20px;
-            /* 142.857% */
+    width: 274px;
+    height: 44px;
+    padding: 12px 99px;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 12px;
+    background: $accent;
+    border: 0;
+       
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.43;
+            
+    color: $white;
 }

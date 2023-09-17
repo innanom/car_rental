@@ -26,7 +26,7 @@ const CarsCatalog = () => {
     
 
     return (
-        <div>
+        <div className={css.container}>
             <ul className={css.list}>
                 {cars.map((car) => <CarCard data={car}  key={car.id} />)}
             </ul>
