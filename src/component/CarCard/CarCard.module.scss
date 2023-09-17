@@ -75,4 +75,10 @@
     line-height: 1.43;
             
     color: $white;
+
+        &:hover,
+        &:focus {
+                transition: all, 0.5s;
+                background-color: #0B44CD;
+            }
 }

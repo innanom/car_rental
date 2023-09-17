@@ -1,3 +1,5 @@
+@import 'src/styles/variables';
+
 .overlay{
     position: fixed;
     top: 0;
@@ -29,6 +31,7 @@
     padding-top: 16px;
     padding-right: 16px;
     cursor: pointer;
+
 }
 .img {
     margin-bottom: 14px;
@@ -179,4 +182,10 @@
     line-height: 1.43;
 
     color: $white;
+
+        &:hover,
+            &:focus {
+                transition: all, 0.5s;
+                background: #0B44CD;
+            }
 }

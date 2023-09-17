@@ -5,12 +5,18 @@
 
 .logoLink {
         display: flex;
-            flex-direction: row;
-            gap: 8px;
-            align-items: center;
-            font-family: Anton;
-            font-size: 30px;
-            font-weight: 600;
-            line-height: 1.5;
+        flex-direction: row;
+        gap: 8px;
+        align-items: center;
+        font-family: Anton;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 1.5;
+
+        &:hover,
+            &:focus {
+                transition: all, 0.5s;
+                color: #0B44CD;
+            }
 
 }
