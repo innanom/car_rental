@@ -22,14 +22,14 @@ const CarsCatalog = () => {
     setPage(prevPage => prevPage += 1);
     };
 
-    const totalPage = Math.ceil(30 / 8);
+   
 
     return (
         <div className={css.container}>
             <ul className={css.list}>
                 {cars.map((car) => <CarCard data={car}  key={car.id} />)}
             </ul>
-            {totalPage > page && <button className={css.btn} onClick={handleLoadMore}>Load more</button>}
+            <button className={css.btn} onClick={handleLoadMore}>Load more</button>
             
         </div>
     )
