@@ -1,7 +1,10 @@
+import  Welcome  from "../component/Welcome/Welcome";
 
 const Home = () => {
     return (
-        <div>Home</div>
+        <div>
+            <Welcome />
+        </div>
     )
 };
 

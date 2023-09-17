@@ -20,7 +20,7 @@ const CarCard = ({ data }) => {
                 }
             });
         }
-    }, [data.id]);
+        }, [data.id, favorites]);
 
     
     const toggleLike = () => {
@@ -34,11 +34,10 @@ const CarCard = ({ data }) => {
         } else {
             const favCars = JSON.parse(localStorage.getItem("favorites")) || [];
             const removeFavorites = favCars.filter((item) => item.id !== data.id);
-            setFavorites(removeFavorites);
             localStorage.setItem('favorites', JSON.stringify(removeFavorites));
+            setFavorites(removeFavorites);
         }
     };
-
    
      const handleOpenModal = () => {
         setShowModal(true);
